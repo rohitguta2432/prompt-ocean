@@ -1,0 +1,44 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; background: #04070d; color: #e8f0f6; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; overflow: hidden; }
+
+.stage { position: fixed; inset: 0; }
+.stage canvas { display: block; }
+
+.hud { position: absolute; z-index: 10; display: flex; flex-direction: column; gap: 6px; }
+
+.hud.top { top: 22px; left: 26px; pointer-events: none; }
+.hud.top h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; text-shadow: 0 2px 12px rgba(0,0,0,.6); }
+.hud.top p { font-size: 13px; opacity: .85; text-shadow: 0 1px 8px rgba(0,0,0,.7); }
+.hud.top a { pointer-events: auto; font-size: 12px; color: #9fd4ff; text-decoration: none; width: fit-content; }
+.hud.top a:hover { text-decoration: underline; }
+
+.hud.bottom { bottom: 26px; left: 50%; transform: translateX(-50%); align-items: center; width: min(680px, 92vw); }
+
+.chips { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.chips button {
+  font-size: 12px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  color: #dceafc; background: rgba(10, 20, 34, .55); border: 1px solid rgba(160, 200, 255, .25);
+  backdrop-filter: blur(10px); transition: background .2s, border-color .2s;
+}
+.chips button:hover { background: rgba(30, 60, 100, .65); border-color: rgba(160, 200, 255, .55); }
+
+.hud.bottom form {
+  display: flex; gap: 8px; width: 100%; padding: 8px; border-radius: 16px;
+  background: rgba(8, 16, 28, .6); border: 1px solid rgba(160, 200, 255, .22);
+  backdrop-filter: blur(14px); box-shadow: 0 8px 40px rgba(0, 0, 0, .45);
+}
+.hud.bottom input {
+  flex: 1; background: transparent; border: none; outline: none;
+  color: #eef6ff; font-size: 15px; padding: 8px 10px;
+}
+.hud.bottom input::placeholder { color: rgba(220, 234, 252, .45); }
+.hud.bottom form button {
+  font-size: 14px; font-weight: 600; padding: 8px 18px; border-radius: 11px; cursor: pointer;
+  color: #04121f; background: linear-gradient(135deg, #7fd8ff, #35d0ba); border: none;
+  transition: filter .2s;
+}
+.hud.bottom form button:hover { filter: brightness(1.1); }
+.hud.bottom form button:disabled { opacity: .6; cursor: wait; }
+
+.source { font-size: 11px; opacity: .6; }
