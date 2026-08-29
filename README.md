@@ -81,3 +81,11 @@ PRs welcome — good first issues: new mood rules in `lib/interpret.mjs`, buoyan
 ## License
 
 MIT © Rohit Raj — [rohitraj.tech](https://rohitraj.tech)
+
+---
+
+### 🤝 Work with me
+
+I'm an **AI Consultant · Forward Deployed Engineer** — I embed with teams and ship AI to production: agents, MCP integrations, and LLM features, with evals proving they work.
+
+**→ [rohitraj.tech/en/hire](https://rohitraj.tech/en/hire)**
